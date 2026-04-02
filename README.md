@@ -97,10 +97,10 @@ DIVIDE(
 ## 📁 Repository Structure
 
 ```
-├── screenshots/
-│   ├── overview.png
-│   ├── hosting_growth.png
-│   └── customer_satisfaction.png
+
+│── overview.png
+│── hosting_growth.png
+│── customer_satisfaction.png
 ├── AirbnbDashboard_Farwah.pbix
 └── README.md
 ```
@@ -140,9 +140,8 @@ The `.pbix` file is too large for GitHub (195MB). Download it directly from Goog
 
 ---
 
-## 👤 Farwah
-
-Built as a data analytics portfolio project using publicly available Airbnb data.
+## 👤 **Author**: *Farwah Hasnain*  
+📧 Contact: [farwah.hasnain@gmail.com] | 🌐 [LinkedIn](https://www.linkedin.com/in/farwah-hasnain/)
 
 ---
 
