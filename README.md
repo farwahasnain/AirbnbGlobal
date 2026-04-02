@@ -53,7 +53,6 @@ Examines demand-side performance through guest reviews, satisfaction scores, and
 | Property | Details |
 |---|---|
 | Source | [Maven Analytics Data Playground](https://mavenanalytics.io/data-playground/airbnb-listings-reviews) |
-| Original source | [Inside Airbnb](http://insideairbnb.com/get-the-data.html) |
 | License | Public Domain |
 | Tables | Listings, Reviews |
 | Total listings | 279,712 |
