@@ -62,15 +62,70 @@ Examines demand-side performance through guest reviews, satisfaction scores, and
 
 ---
 
+## 💡 Business Questions Answered
+
+1. How large is the Airbnb platform globally in terms of listings, hosts, cities, property types and reviews?
+2. How did new listings grow over time from 2008 to 2022 — and what were the key lifecycle phases (Introduction, Growth, Maturity, Decline, Re-invention, COVID-19)?
+3. When did Airbnb reach its peak supply, and what caused the decline?
+4. How did each room type (Entire place, Private room, Hotel room, Shared room) contribute to listing growth over the years?
+5. What was the impact of COVID-19 on the platform's listing volume?
+6. How many total listings and hosts exist across the platform?
+7. What proportion of hosts have achieved Superhost status — and what does that mean for quality?
+8. What share of listings are instantly bookable, and how does that affect guest convenience?
+9. How trustworthy is the host base — what percentage have verified identities?
+10. How has the count of hosts grown and declined year over year?
+11. What room types make up the listing supply, and which dominates?
+12. What is the overall average guest rating across the entire platform?
+13. Which cities attract the most visitors, and at what average nightly price?
+14. Is there a relationship between visitor volume and pricing — do popular cities tend to be cheaper or more expensive?
+15. Which property type is most popular among guests — Entire place or Entire apartment?
+16. How do cities compare across specific satisfaction dimensions — Accuracy, Check-in, Cleanliness, Communication, Location and Value?
+17. Which city has the highest overall guest satisfaction, and which has the lowest?
+18. How do accuracy and cleanliness scores compare globally as standalone KPIs?
+
+Across all three dashboards together, the report answers the single overarching business question:
+
+**"How healthy is the global Airbnb marketplace — from supply growth and host quality, to guest demand and satisfaction — and which cities lead or lag across each dimension?"**
+
+---
+
 ## 🧮 Key DAX Measures
 
 ```dax
+-- Average Price = AVERAGE(Listings[price])
+-- Total Listings = COUNT(Listings[listing_id])
 
 -- Visitors (proxy)
 Total Visitors = COUNTROWS('Reviews')
 
 -- Average Rating (scaled to 100)
-Avg Rating = AVERAGE('Listings'[review_scores_rating])
+Average Rating = AVERAGE('Listings'[review_scores_rating])
+
+-- Entire place = 
+CALCULATE(
+    COUNT (Listings[listing_id]), 
+    Listings[room_type] = "Entire place"
+)
+
+-- Private room = 
+CALCULATE(
+    COUNT (Listings[listing_id]), 
+    Listings[room_type] = "Private room"
+)
+
+-- Hotel room = 
+CALCULATE(
+    COUNT (Listings[listing_id]), 
+    Listings[room_type] = "Hotel room"
+)
+
+-- Shared room = 
+CALCULATE(
+    COUNT (Listings[listing_id]), 
+    Listings[room_type] = "Shared room"
+)
+
+-- Year = YEAR(Listings[host_since])
 
 -- Superhost %
 Superhost % = 
@@ -105,32 +160,7 @@ DIVIDE(
 └── README.md
 ```
 
----
 
-## 💡 Business Questions Answered
-
-1. How large is the Airbnb platform globally in terms of listings, hosts, cities, property types and reviews?
-2. How did new listings grow over time from 2008 to 2022 — and what were the key lifecycle phases (Introduction, Growth, Maturity, Decline, Re-invention, COVID-19)?
-3. When did Airbnb reach its peak supply, and what caused the decline?
-4. How did each room type (Entire place, Private room, Hotel room, Shared room) contribute to listing growth over the years?
-5. What was the impact of COVID-19 on the platform's listing volume?
-6. How many total listings and hosts exist across the platform?
-7. What proportion of hosts have achieved Superhost status — and what does that mean for quality?
-8. What share of listings are instantly bookable, and how does that affect guest convenience?
-9. How trustworthy is the host base — what percentage have verified identities?
-10. How has the count of hosts grown and declined year over year?
-11. What room types make up the listing supply, and which dominates?
-12. What is the overall average guest rating across the entire platform?
-13. Which cities attract the most visitors, and at what average nightly price?
-14. Is there a relationship between visitor volume and pricing — do popular cities tend to be cheaper or more expensive?
-15. Which property type is most popular among guests — Entire place or Entire apartment?
-16. How do cities compare across specific satisfaction dimensions — Accuracy, Check-in, Cleanliness, Communication, Location and Value?
-17. Which city has the highest overall guest satisfaction, and which has the lowest?
-18. How do accuracy and cleanliness scores compare globally as standalone KPIs?
-
-Across all three dashboards together, the report answers the single overarching business question:
-
-**"How healthy is the global Airbnb marketplace — from supply growth and host quality, to guest demand and satisfaction — and which cities lead or lag across each dimension?"**
 
 ---
 
