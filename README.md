@@ -21,7 +21,7 @@ A high-level snapshot of the global Airbnb market, tracking listing growth over 
 ---
 
 ### 2. Hosting Growth
-![Hosting Growth Dashboard](screenshots/hosting_growth.png)
+![Hosting Growth Dashboard](hosting_growth.PNG)
 
 Explores the supply side of the Airbnb market — who is hosting, what they are offering, and how trustworthy the host base is.
 
