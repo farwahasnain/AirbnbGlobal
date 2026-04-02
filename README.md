@@ -35,7 +35,7 @@ Explores the supply side of the Airbnb market — who is hosting, what they are 
 ---
 
 ### 3. Customer Satisfaction
-![Customer Satisfaction Dashboard](screenshots/customer_satisfaction.png)
+![Customer Satisfaction Dashboard](./customer_satisfaction.png)
 
 Examines demand-side performance through guest reviews, satisfaction scores, and city-level pricing patterns.
 
