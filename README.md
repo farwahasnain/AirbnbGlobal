@@ -8,7 +8,7 @@ A multi-page interactive Power BI dashboard analyzing **279,712 Airbnb listings*
 ## 📊 Dashboard Pages
 
 ### 1. Overview
-![Overview Dashboard](screenshots/overview.png)
+![Overview Dashboard]([https://github.com/farwahasnain/AirbnbGlobal/blob/main/overview.PNG])
 
 A high-level snapshot of the global Airbnb market, tracking listing growth over time and platform lifecycle stages — from Introduction (pre-2010) through Growth, Maturity, Decline, Re-invention, and the impact of COVID-19.
 
